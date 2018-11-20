@@ -64,6 +64,8 @@ func (pc *PromClient) GetAbnormalInstance(checkpoint time.Time) ([]string, error
 		for _, pair := range stream.Values {
 			if pair.Value > 0 {
 				visited[instance] = true
+				// TODO: remove port from instance name.
+				// we're only concerned about the IP address.
 				hosts = append(hosts, instance)
 				logrus.Warnf("instance %q identified as an abnormal host", instance)
 				break

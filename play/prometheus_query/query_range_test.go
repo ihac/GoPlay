@@ -38,6 +38,7 @@ func TestPromClient_GetAbnormalInstance(t *testing.T) {
 		{
 			name: "Test1",
 			args: args{
+				// subtract 9 hours from current time due to the time synchronization problem.
 				checkpoint: time.Now().Add(-9 * time.Hour),
 			},
 			want:    []string{"localhost:9090"},
