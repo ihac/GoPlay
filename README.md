@@ -4,4 +4,5 @@ GoPlay is the play ground for me to try/validate some code snippets written in G
 
 ## Contents
 
-1. Promtheus Client Library ([client_golang](https://github.com/prometheus/client_golang))
+1. Promtheus Client Library - [client_golang](https://github.com/prometheus/client_golang)
+    - [QueryRange](play/prometheus/query_range.go)
